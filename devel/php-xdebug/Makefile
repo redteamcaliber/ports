@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	xdebug
-PORTVERSION=	2.2.5
+DISTVERSION=	2.4.0RC4
+DISTFILES=	${PORTNAME}-${DISTVERSION:tl}.tgz
 CATEGORIES=	devel
 MASTER_SITES=	http://www.xdebug.org/files/
 PKGNAMEPREFIX=	php-
