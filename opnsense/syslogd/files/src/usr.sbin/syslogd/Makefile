@@ -9,14 +9,13 @@ PROG=	syslogd
 MAN=	syslog.conf.5 syslogd.8
 SRCS=	syslogd.c ttymsg.c
 
-DPADD=	${LIBUTIL}
-LDADD=	-lutil
+LIBADD=	util
 
 WARNS?= 3
 
-#.if ${MK_INET6_SUPPORT} != "no"
+.if ${MK_INET6_SUPPORT} != "no"
 #CFLAGS+= -DINET6
-#.endif
+.endif
 
 CFLAGS+= -I${.CURDIR}/../../usr.bin/wall
 
